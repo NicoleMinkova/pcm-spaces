@@ -1,5 +1,16 @@
 .previewTitle {
   font-size: 1.5em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.previewLink {
+  text-decoration: none;
+}
+
+.previewLink:hover {
+  color: #008580;
 }
 
 .tag {
