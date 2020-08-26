@@ -1,49 +1,42 @@
 {
-  "name": "contentful-starter-gatsby-blog",
-  "description": "Contentful Gatsby Starter Blog",
-  "private": true,
-  "version": "0.0.1",
-  "author": "Contentful <opensource@contentful.com>",
-  "bugs": {
-    "url": "https://github.com/contentful/starter-gatsby-blog/issues"
-  },
+  "name": "linas-recipes",
+  "description": "Lina's recipes website",
+  "version": "1.0.0",
+  "author": "James Moran",
   "dependencies": {
-    "gatsby": "^2.23.9",
-    "gatsby-image": "^2.4.8",
-    "gatsby-plugin-react-helmet": "^3.3.5",
-    "gatsby-source-contentful": "^2.3.17",
-    "gatsby-transformer-remark": "^2.8.18",
-    "gatsby-transformer-sharp": "^2.5.6",
-    "gh-pages": "^3.1.0",
-    "lodash": "^4.17.15",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-helmet": "^6.1.0"
+    "@contentful/rich-text-react-renderer": "^14.1.1",
+    "@contentful/rich-text-types": "^14.1.1",
+    "dotenv": "^8.1.0",
+    "gatsby": "^2.24.4",
+    "gatsby-image": "^2.4.13",
+    "gatsby-plugin-manifest": "^2.4.18",
+    "gatsby-plugin-postcss": "^2.3.11",
+    "gatsby-plugin-react-helmet": "^3.3.10",
+    "gatsby-plugin-react-svg": "^3.0.0",
+    "gatsby-plugin-styled-components": "^3.3.10",
+    "gatsby-plugin-typescript": "^2.4.15",
+    "gatsby-source-contentful": "^2.3.27",
+    "gatsby-transformer-remark": "^2.8.25",
+    "node-sass": "^4.13.0",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-helmet": "^6.1.0",
+    "react-seo-component": "^2.0.2",
+    "styled-components": "^5.1.1",
+    "styled-reset": "^4.2.1"
   },
-  "devDependencies": {
-    "contentful-import": "^7.8.6",
-    "netlify-cli": "^2.54.0"
-  },
-  "homepage": "https://github.com/contentful/starter-gatsby-blog#readme",
   "keywords": [
-    "gatsby",
-    "contentful",
-    "starter"
+    "gatsby"
   ],
   "license": "MIT",
   "main": "n/a",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/contentful/starter-gatsby-blog.git"
-  },
   "scripts": {
-    "dev": "gatsby develop",
     "build": "gatsby build",
-    "heroku-postbuild": "gatsby build",
-    "serve": "gatsby serve",
-    "postinstall": "node ./bin/hello.js",
-    "setup": "node ./bin/setup.js",
-    "netlify:login": "netlify login",
-    "netlify:deploy": "netlify deploy -d public -p"
+    "develop": "gatsby develop",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\""
+  },
+  "devDependencies": {
+    "prettier": "^1.17.0",
+    "tailwindcss": "^1.7.3"
   }
 }

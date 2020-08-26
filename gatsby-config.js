@@ -1,4 +1,4 @@
-require("dotenv").config({
+require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
@@ -19,22 +19,44 @@ const { spaceId, accessToken } = contentfulConfig;
 
 if (!spaceId || !accessToken) {
   throw new Error(
-    "Contentful spaceId and the access token need to be provided."
+    'Contentful spaceId and the access token need to be provided.',
   );
 }
 
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Contentful starter",
+    title: `PCM Spaces`,
+    description: `Community news and events from the PCM team at Exane`,
+    siteUrl: `https://pcm-spaces.netlify.app`,
   },
-  pathPrefix: "/gatsby-contentful-starter",
   plugins: [
-    "gatsby-transformer-remark",
-    "gatsby-transformer-sharp",
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sharp",
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-postcss`,
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-typescript`,
+    `gatsby-transformer-remark`,
     {
-      resolve: "gatsby-source-contentful",
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `PCM Spaces`,
+        short_name: `PCM Spaces`,
+        start_url: `/`,
+        background_color: `#edf5e1`,
+        theme_color: `#00966e`,
+        display: `standalone`,
+        icon: `src/images/favicon.ico`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-react-svg`,
+      options: {
+        rule: {
+          include: /assets/,
+        },
+      },
+    },
+    {
+      resolve: `gatsby-source-contentful`,
       options: contentfulConfig,
     },
   ],
